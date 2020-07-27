@@ -1,0 +1,5 @@
+AWK to strip lines
+awk  'BEGIN{RS="\\. "}1' trump-speech.txt > trump-speech-lined.txt
+
+tr '\n' ' ' <  trump-speech.txt | sed -e $'s/[.] \s*/.\\\n/g'
+
